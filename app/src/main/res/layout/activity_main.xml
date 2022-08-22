@@ -4,14 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_red"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/appHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Calculator"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/num1ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="212dp"
+        android:ems="10"
+        android:hint="Enter First Integer"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/num2ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="280dp"
+        android:ems="10"
+        android:hint="Enter Second Integer"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/divisionButton"
+        android:layout_width="46dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="16dp"
+        android:text="÷"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicationButton" />
+
+    <Button
+        android:id="@+id/additionButton"
+        android:layout_width="46dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginBottom="16dp"
+        android:text="+"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/subtractionButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/subtractionButton"
+        android:layout_width="46dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="212dp"
+        android:text="-"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/multiplicationButton"
+        android:layout_width="46dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="16dp"
+        android:text="x"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtractionButton" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginBottom="216dp"
+        android:text="Result"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/invertColorsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="484dp"
+        android:text="Invert Colors"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
