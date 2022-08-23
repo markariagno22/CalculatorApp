@@ -52,6 +52,19 @@
         android:layout_marginTop="16dp"
         android:text="÷"
         android:textSize="24sp"
+        android:onClick="findDivision"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicationButton" />
+
+    <Button
+        android:id="@+id/squareButton"
+        android:layout_width="61dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="88dp"
+        android:onClick="findSquare"
+        android:text="x^y"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/multiplicationButton" />
 
@@ -63,6 +76,7 @@
         android:layout_marginBottom="16dp"
         android:text="+"
         android:textSize="24sp"
+        android:onClick="findSum"
         app:layout_constraintBottom_toTopOf="@+id/subtractionButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -76,6 +90,7 @@
         android:layout_marginTop="212dp"
         android:text="-"
         android:textSize="24sp"
+        android:onClick="findDifference"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -87,15 +102,16 @@
         android:layout_marginTop="16dp"
         android:text="x"
         android:textSize="20sp"
+        android:onClick="findProduct"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subtractionButton" />
 
     <TextView
-        android:id="@+id/result"
+        android:id="@+id/resultTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="212dp"
         android:text="Result"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -105,8 +121,9 @@
         android:id="@+id/invertColorsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="484dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="516dp"
+        android:onClick="invertColors"
         android:text="Invert Colors"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
