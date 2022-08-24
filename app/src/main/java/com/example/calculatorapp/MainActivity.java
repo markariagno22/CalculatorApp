@@ -24,11 +24,17 @@ public class MainActivity extends AppCompatActivity {
         EditText num2ET = findViewById(R.id.num2ET);
         TextView resultTV = findViewById(R.id.resultTV);
 
-        int num1 = Integer.parseInt(num1ET.getText().toString());
-        int num2 = Integer.parseInt(num2ET.getText().toString());
-        int sum = num1 + num2;
+        try{
 
-        resultTV.setText("" + sum);
+            int num1 = Integer.parseInt(num1ET.getText().toString());
+            int num2 = Integer.parseInt(num2ET.getText().toString());
+            int sum = num1 + num2;
+
+            resultTV.setText("" + sum);
+
+        } catch(Exception e){
+            resultTV.setText("Please input 2 integers");
+        }
 
     }
 
@@ -37,11 +43,17 @@ public class MainActivity extends AppCompatActivity {
         EditText num2ET = findViewById(R.id.num2ET);
         TextView resultTV = findViewById(R.id.resultTV);
 
-        int num1 = Integer.parseInt(num1ET.getText().toString());
-        int num2 = Integer.parseInt(num2ET.getText().toString());
-        int difference = num1 - num2;
+        try{
 
-        resultTV.setText("" + difference);
+            int num1 = Integer.parseInt(num1ET.getText().toString());
+            int num2 = Integer.parseInt(num2ET.getText().toString());
+            int dif = num1 - num2;
+
+            resultTV.setText("" + dif);
+
+        } catch(Exception e){
+            resultTV.setText("Please input 2 integers");
+        }
     }
 
     public void findProduct(View view){
@@ -49,36 +61,86 @@ public class MainActivity extends AppCompatActivity {
         EditText num2ET = findViewById(R.id.num2ET);
         TextView resultTV = findViewById(R.id.resultTV);
 
-        int num1 = Integer.parseInt(num1ET.getText().toString());
-        int num2 = Integer.parseInt(num2ET.getText().toString());
-        int product = num1 * num2;
+        try{
 
-        resultTV.setText("" + product);
+            int num1 = Integer.parseInt(num1ET.getText().toString());
+            int num2 = Integer.parseInt(num2ET.getText().toString());
+            int product = num1 * num2;
+
+            resultTV.setText("" + product);
+
+        } catch(Exception e){
+            resultTV.setText("Please input 2 integers");
+        }
     }
 
     public void findDivision(View view){
+
         EditText num1ET = findViewById(R.id.num1ET);
         EditText num2ET = findViewById(R.id.num2ET);
         TextView resultTV = findViewById(R.id.resultTV);
 
-        int num1 = Integer.parseInt(num1ET.getText().toString());
-        int num2 = Integer.parseInt(num2ET.getText().toString());
-        int div = num1 / num2;
+        try{
 
-        resultTV.setText("" + div);
+            int num1 = Integer.parseInt(num1ET.getText().toString());
+            int num2 = Integer.parseInt(num2ET.getText().toString());
+            int div = num1 / num2;
+
+            resultTV.setText("" + div);
+
+        } catch(Exception e){
+            resultTV.setText("Please input 2 integers");
+        }
+
     }
 
     public void findSquare(View view){
+
         EditText num1ET = findViewById(R.id.num1ET);
         EditText num2ET = findViewById(R.id.num2ET);
         TextView resultTV = findViewById(R.id.resultTV);
 
-        int num1 = Integer.parseInt(num1ET.getText().toString());
-        int num2 = Integer.parseInt(num2ET.getText().toString());
-        int square = (int) (Math.pow((double)(num1), (double)(num2)));
+        try{
 
-        resultTV.setText("" + square);
-        
+            int num1 = Integer.parseInt(num1ET.getText().toString());
+            int num2 = Integer.parseInt(num2ET.getText().toString());
+            int square = (int) (Math.pow((double)(num1), (double)(num2)));
+
+            resultTV.setText("" + square);
+
+        } catch(Exception e){
+            resultTV.setText("Please input 2 integers");
+        }
+
+    }
+
+    /*
+    ************************** ADD COMMENT FOR SOURCE HERE ******************************
+     */
+    public void findFactorial(View view){
+        EditText num1ET = findViewById(R.id.num1ET);
+        EditText num2ET = findViewById(R.id.num2ET);
+        TextView resultTV = findViewById(R.id.resultTV);
+
+        try{
+            int num = Integer.parseInt(num1ET.getText().toString());
+            if(num2ET.equals("")){
+                resultTV.setText("Clear second integer");
+            }
+            else if (num < 21){
+                long fact = 1;
+                for (int i = 2; i <= num; i++) {
+                    fact = fact * i;
+                }
+                resultTV.setText("" + fact);
+            }else{
+                resultTV.setText("Choose an integer under 21");
+            }
+
+        } catch(Exception e){
+            resultTV.setText("Enter a valid integer");
+        }
+
     }
 
 
