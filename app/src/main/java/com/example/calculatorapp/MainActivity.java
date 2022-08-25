@@ -2,8 +2,10 @@ package com.example.calculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -15,9 +17,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void invertColors(View view){
-
+    public void switchScreens(View view){
+        Intent intent = new Intent(this, ButtonMode.class);
+        startActivity(intent);
     }
+
 
     public void findSum(View view){
         EditText num1ET = findViewById(R.id.num1ET);
@@ -124,10 +128,9 @@ public class MainActivity extends AppCompatActivity {
 
         try{
             int num = Integer.parseInt(num1ET.getText().toString());
-            if(num2ET.equals("")){
-                resultTV.setText("Clear second integer");
-            }
-            else if (num < 21){
+            num2ET.setText("");
+
+            if (num < 21){
                 long fact = 1;
                 for (int i = 2; i <= num; i++) {
                     fact = fact * i;
