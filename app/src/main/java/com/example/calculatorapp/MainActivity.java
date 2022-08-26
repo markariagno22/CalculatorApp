@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-    ************************** ADD COMMENT FOR SOURCE HERE ******************************
+    * Code for factorial algorithm found on https://www.baeldung.com/java-calculate-factorial
      */
     public void findFactorial(View view){
         EditText num1ET = findViewById(R.id.num1ET);
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 resultTV.setText("" + fact);
             }else{
-                resultTV.setText("Choose an integer under 21");
+                resultTV.setText("Choose an integer up to 20");
             }
 
         } catch(Exception e){

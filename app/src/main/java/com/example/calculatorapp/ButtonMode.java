@@ -35,7 +35,16 @@ public class ButtonMode extends AppCompatActivity {
 
         num1 = 0;
         resultTV.setText("");
+        resultTV.setHint("Enter an Integer");
 
+    }
+
+    public void switchSigns(View view){
+        equalsPressed = false;
+        TextView resultTV = findViewById(R.id.resultTVB);
+        if(!resultTV.getText().equals("") && !resultTV.getText().equals(0)) {
+            resultTV.setText("" + (-1) * Integer.parseInt(resultTV.getText().toString()));
+        }
     }
 
     public void add(View view){
